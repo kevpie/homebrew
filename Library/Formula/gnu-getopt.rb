@@ -16,5 +16,6 @@ class GnuGetopt < Formula
       s.change_make_var! "LDFLAGS", "\\1 -L#{gettext.lib} -lintl"
     end
     system "make", "prefix=#{prefix}", "mandir=#{man}", "install"
+    system "make", "prefix=#{prefix}", "mandir=#{man}", "install_doc"
   end
 end
